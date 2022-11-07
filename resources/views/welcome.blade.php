@@ -24,7 +24,7 @@
     <div id="quizContent" class="mt-8 sm:mt-2 md:mt-4 flex justify-center items-center h-auto sm:h-1/2 w-3/5 max-w-screen-2xl m-auto">
         <div id="page" class="font-poppins text-center">
             <h3 id="category" class="mt-0 w-auto text-14 leading-normal text-donkeyblue font-semibold"></h3>
-            <h2 id="content" class="border-2 inline-block mt-4 md:mt-6 lg:mt-8 font-semibold text-20 lg:text-36 xl:text-48  text-donkeytext"></h2>
+            <h2 id="content" class="inline-block mt-4 md:mt-6 lg:mt-8 font-semibold text-20 lg:text-36 xl:text-48  text-donkeytext"></h2>
             <p id="subtext" class="mt-2 md:mt-6 font-normal text-12 md:text-14 lg:text-16 text-donkeydarkblue "></p>
             <div id="categoryResult" class="m-0 p-0 md:mt-10 xl:mt-16"></div>
             <div id="buttons" class="mt-4 md:mt-6 xl:mt-8">
@@ -163,7 +163,7 @@
                 correctAnswers[questions[currentQuestion].category]++;
                 console.log(correctAnswers);
             }
-            if (currentQuestion >= 4) {
+            if (currentQuestion >= 34) {
                 document.getElementById("quizContent").removeEventListener("animationend", zoomInseeAnswer);
                 document.getElementById("quizContent").removeEventListener("animationend", zoomInGiveQuestion);
                 zoomInshowResults();
@@ -199,7 +199,7 @@
 
             document.getElementById("subtext").className = "";
             document.getElementById("subtext").innerHTML = "";
-            document.getElementById("categoryResult").className = "border-2 sm:-mt-10 md:mt-0 flex scale-50 sm:scale-60 md:scale-80 lg:scale-100";
+            document.getElementById("categoryResult").className = "sm:-mt-10 md:mt-0 flex scale-50 sm:scale-60 md:scale-80 lg:scale-100";
             document.getElementById("categoryResult").innerHTML = categoryResult();
             document.getElementById("button1").innerHTML = "";
             document.getElementById("button1").className = "";
